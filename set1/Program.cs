@@ -10,7 +10,7 @@ namespace set1
     {
         static void Main(string[] args)
         {
-            q5();
+            q12();
         }
         static int getInt(string message) 
         {
@@ -58,6 +58,63 @@ namespace set1
             int remainder = numerator%denominator;
             Console.WriteLine("Quotient is : "+quotient);
             Console.WriteLine("Remainder is : "+remainder);
+        }
+        static void q6() 
+        {
+            //program to find the square of a given number
+            int a = getInt("Enter the number to find its square : ");
+            Console.WriteLine("square of "+a+" is : "+(a*a));
+            //Console.WriteLine("square of " + a + " is : " + Math.Pow(a,2));
+        }
+        static void q7() 
+        {
+            //program to find the square root of a given number
+            int a = getInt("Enter the number to find its square root : ");
+            Console.WriteLine("Square root of "+a+" is : "+Math.Sqrt(a));
+        }
+        static void q8() //doubt
+        {
+            //program to calculate the area of triangle
+            double breadth = getInt("Enter the breadth : ");
+            int height = getInt("Enter the height : ");
+            Console.WriteLine("Area of triangle is : "+(0.5 *(breadth*height)));
+        }
+        static void q9() 
+        {
+            //program to convert kilometers to miles
+            int kilometer = getInt("Enter the Kilometers : ");
+            double miles = kilometer * 0.621371;
+            Console.WriteLine("miles :"+miles);
+        }
+        static void q10() 
+        {
+            //program to convert celcius to fahrenheit
+            int celcius = getInt("Enter the celcius : ");
+            int fahrenheit = (celcius * 9 / 5) + 32;
+            Console.WriteLine("Fahrenheit is " + fahrenheit);
+        }
+        static void q11() 
+        {
+            //program to swap two variables
+            int a = getInt("Enter the a : ");
+            int b = getInt("Enter the b : ") ;
+            int temp = 0;
+            temp = b;
+            b = a;
+            a = temp;
+            Console.WriteLine("a is : "+a);
+            Console.WriteLine("b is : " + b);
+        }
+        static void q12() 
+        {
+            //program to swap two variables without using temporary variables
+            int a = getInt("Enter the a : ");
+            int b = getInt("Enter the b : ");
+            a = a + b;
+            b = a - b;
+            a = a - b;
+            Console.WriteLine("a is : " + a);
+            Console.WriteLine("b is : " + b);
         }
     }
 }
