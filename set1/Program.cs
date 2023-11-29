@@ -10,7 +10,7 @@ namespace set1
     {
         static void Main(string[] args)
         {
-            q8();
+            q24();
         }
         static int getInt(string message) 
         {
@@ -201,6 +201,48 @@ namespace set1
             pfAmount = basicpay * pfPercentage / 100;
             grosspay = (basicpay + daAmount + taAmount) - pfAmount;
             Console.WriteLine("Gross Pay is : "+grosspay);
+        }
+        static void q21() 
+        {
+            //write a program to calculate simple interest
+            double simpleInterest, principal, numberofYears, rateofInterest;
+            principal = getDouble("Enter the principal : ");
+            rateofInterest = getDouble("Enter rate of interest : ");
+            numberofYears = getDouble("Enter number of years : ");
+            simpleInterest = (principal * numberofYears * rateofInterest)/100;
+            Console.WriteLine("simple interest is : "+simpleInterest);
+        }
+        static void q22() 
+        {
+            //write a program to compute compound interest
+            double compoundInterest, principal, numberofYears, rateofInterest,t;
+            principal = getDouble("Enter the principal : ");
+            rateofInterest = getDouble("Enter rate of interest : ");
+            numberofYears = getDouble("Enter number of years : ");
+            t = getDouble("Enter number of times : ");
+            compoundInterest = principal*(Math.Pow((1+rateofInterest/numberofYears),(numberofYears*t)));
+            Console.WriteLine("Compound Interest is : "+compoundInterest);
+        }
+        static void q23() 
+        {
+            //given the height of a person in cm print the height in feet &inches.
+            double height, feet, inches;
+            height = getDouble("Enter the height in cm : ");
+            inches = height / 2.54;
+            feet = height * 0.0328;
+            Console.WriteLine("height in inches : "+inches+"\nheight in feet : "+feet);
+
+
+        }
+        static void q24() 
+        {
+            //program to find BMI given height in meters and weight in kilograms.
+            double height, weight,bmi;
+            height = getDouble("Enter the height in meters : ");
+            weight = getDouble("Enter the weight : ");
+            bmi = weight /( height * height)*1000;
+            Console.WriteLine("BMI is : "+bmi);
+
         }
     }
 }
