@@ -10,12 +10,17 @@ namespace set1
     {
         static void Main(string[] args)
         {
-            q17();
+            q20();
         }
         static int getInt(string message) 
         {
             Console.Write(message);
             return int.Parse(Console.ReadLine());
+        }
+        static double getDouble(string message) 
+        {
+            Console.Write(message);
+            return double.Parse(Console.ReadLine());
         }
         static void q1() 
         {
@@ -136,7 +141,7 @@ namespace set1
         }
         static void q15() 
         {
-
+            //Find the area of a field in acres, whose length and width are given in feet. 
             double length, width, sqft, acres;
             Console.Write("Enter the length : ");
             length = double.Parse(Console.ReadLine());
@@ -163,6 +168,39 @@ namespace set1
             total = n1 + n2 + n3;
             double average = total / 3.0;
             Console.WriteLine("Total is : "+total+"\nAverage is : "+average);
+        }
+        static void q18() 
+        {
+            //write a program to calculate the tip to be provided to the waiter, at 5% of bill amount
+            int billAmount = getInt("Enter the bill amount : ");
+            int tip = billAmount * 5/100;
+            Console.WriteLine("Tip to the waiter is : "+tip);
+        }
+        static void q19() 
+        {
+            //Given the total amount paid and the tax percentage, calculate the net amount of the product backwards.
+            double taxRate ,netAmount,totalAmount,taxPercentage;
+            totalAmount = getInt("Enter the total amount : ");
+            taxPercentage = getDouble("Enter the tax percentage : ");
+            taxRate = taxPercentage / 100;
+            netAmount =totalAmount/(1+taxRate);
+            Console.WriteLine(netAmount);
+            Console.WriteLine("after tax : "+ ((netAmount*taxPercentage/100)+netAmount));
+        }
+        static void q20() 
+        {
+            //Given the basic pay,DA% and TA%,PF%, calculate the grosspay.
+            double daPercentage,taPercentage,pfPercentage,grosspay;
+            int basicpay = getInt("Enter the basic pay : ");
+            daPercentage = getDouble("Enter the DA percentage : ");
+            taPercentage = getDouble("Enter the TA percentage : ");
+            pfPercentage = getDouble("Enter the PF percentage : ");
+            double daAmount, taAmount, pfAmount;
+            daAmount = basicpay * daPercentage / 100;
+            taAmount = basicpay * taPercentage / 100;
+            pfAmount = basicpay * pfPercentage / 100;
+            grosspay = (basicpay + daAmount + taAmount) - pfAmount;
+            Console.WriteLine("Gross Pay is : "+grosspay);
         }
     }
 }
