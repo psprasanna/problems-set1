@@ -10,7 +10,7 @@ namespace set1
     {
         static void Main(string[] args)
         {
-            q20();
+            q8();
         }
         static int getInt(string message) 
         {
@@ -77,12 +77,12 @@ namespace set1
             int a = getInt("Enter the number to find its square root : ");
             Console.WriteLine("Square root of "+a+" is : "+Math.Sqrt(a));
         }
-        static void q8() //doubt
+        static void q8() 
         {
             //program to calculate the area of triangle
             double breadth = getInt("Enter the breadth : ");
             int height = getInt("Enter the height : ");
-            Console.WriteLine("Area of triangle is : "+(0.5 *(breadth*height)));
+            Console.WriteLine("Area of triangle is : "+(0.5 *breadth*height));
         }
         static void q9() 
         {
