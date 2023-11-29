@@ -10,7 +10,7 @@ namespace set1
     {
         static void Main(string[] args)
         {
-            q12();
+            q17();
         }
         static int getInt(string message) 
         {
@@ -115,6 +115,54 @@ namespace set1
             a = a - b;
             Console.WriteLine("a is : " + a);
             Console.WriteLine("b is : " + b);
+        }
+        static void q13() 
+        {
+            //program to swap variables without causing overflow
+            int a = getInt("Enter the a : ");
+            int b = getInt("Enter the b : ");
+            a = a ^ b;
+            b = a ^ b;
+            a = a ^ b;
+            Console.WriteLine("a is : " + a);
+            Console.WriteLine("b is : " + b);
+        }
+        static void q14() 
+        {
+            //generate random numbers between 1 to 100
+            Random randomNumer = new Random();
+            int generateRandom = randomNumer.Next(1,100);
+            Console.WriteLine(generateRandom);
+        }
+        static void q15() 
+        {
+
+            double length, width, sqft, acres;
+            Console.Write("Enter the length : ");
+            length = double.Parse(Console.ReadLine());
+            Console.Write("Enter the width : ");
+            width = double.Parse(Console.ReadLine());
+            sqft = length * width;
+            acres = sqft / 43560;
+            Console.WriteLine("square feet is : "+sqft+"\nacres is : "+acres);
+        }
+        static void q16()
+        {
+            //sum of natural numbers
+            int n = getInt("Enter the number : ");
+            int naturalNumbers = n * (n + 1) / 2;
+            Console.WriteLine("sum of natural numbers : "+naturalNumbers);
+        }
+        static void q17() 
+        {
+            //get three numbers and find the average
+            int n1, n2, n3, total;
+            n1 = getInt("Enter the first number : ");
+            n2 = getInt("Enter the second number : ");
+            n3 = getInt("Enter the third number : ");
+            total = n1 + n2 + n3;
+            double average = total / 3.0;
+            Console.WriteLine("Total is : "+total+"\nAverage is : "+average);
         }
     }
 }
