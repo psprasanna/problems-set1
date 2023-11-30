@@ -10,7 +10,7 @@ namespace set1
     {
         static void Main(string[] args)
         {
-            q25();
+            q22();
         }
         static int getInt(string message) 
         {
@@ -215,12 +215,13 @@ namespace set1
         static void q22() 
         {
             //write a program to compute compound interest
-            double compoundInterest, principal, numberofYears, rateofInterest,t;
-            principal = getDouble("Enter the principal : ");
-            rateofInterest = getDouble("Enter rate of interest : ");
-            numberofYears = getDouble("Enter number of years : ");
-            t = getDouble("Enter number of times : ");
-            compoundInterest = principal*(Math.Pow((1+rateofInterest/numberofYears),(numberofYears*t)));
+            double compoundInterest, p, n, r,t;
+            p = getDouble("Enter the principal : ");
+            n = getDouble("Enter number of compounding periods : ");
+            r = getDouble("Enter rate of interest : ");
+            int time = getInt("Enter number of times in month: ");
+            t = time / 12.0;
+            compoundInterest = p*(Math.Pow((1+r/n),(n*t)));
             Console.WriteLine("Compound Interest is : "+compoundInterest);
         }
         static void q23() 
@@ -231,8 +232,6 @@ namespace set1
             inches = height / 2.54;
             feet = height * 0.0328;
             Console.WriteLine("height in inches : "+inches+"\nheight in feet : "+feet);
-
-
         }
         static void q24() 
         {
@@ -240,12 +239,12 @@ namespace set1
             double height, weight,bmi;
             height = getDouble("Enter the height in meters : ");
             weight = getDouble("Enter the weight : ");
-            bmi = weight /( height * height)*10000;
+            bmi = weight /( height * height);
             Console.WriteLine("BMI is : "+bmi);
         }
         static void q25() 
         {
-            //given name,rollno and three marks of the student find the total and average.
+            //program to read roll no, name and marks of three subjects and calculate the total and average.
             int rollno,mark1, mark2, mark3,total;
             string name;
             double average;
