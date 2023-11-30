@@ -10,7 +10,7 @@ namespace set1
     {
         static void Main(string[] args)
         {
-            q24();
+            q25();
         }
         static int getInt(string message) 
         {
@@ -240,9 +240,24 @@ namespace set1
             double height, weight,bmi;
             height = getDouble("Enter the height in meters : ");
             weight = getDouble("Enter the weight : ");
-            bmi = weight /( height * height)*1000;
+            bmi = weight /( height * height)*10000;
             Console.WriteLine("BMI is : "+bmi);
-
+        }
+        static void q25() 
+        {
+            //given name,rollno and three marks of the student find the total and average.
+            int rollno,mark1, mark2, mark3,total;
+            string name;
+            double average;
+            rollno = getInt("Enter the rollno : ");
+            Console.WriteLine("Enter the Name : ");
+            name = Console.ReadLine();
+            mark1 = getInt("Enter the Mark 1 : ");
+            mark2 = getInt("Enter the Mark 2 : ");
+            mark3 = getInt("Enter the Mark 3 : ");
+            total = mark1 + mark2 + mark3;
+            average = total / 3;
+            Console.WriteLine("Roll No : {0}\nName : {1}\nTotal : {2}\nAverage : {3}",rollno,name,total,average);
         }
     }
 }
